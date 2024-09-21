@@ -1,0 +1,39 @@
+<div class="announcement">
+    <span><p>Free Data, Offer Ends soon</p> <i class='bx bx-right-arrow-alt' style="font-size:1.2rem;"></i></span>
+</div>
+<div class="container">
+    
+    <div class="logo">
+        <span>        <img src="reallogo.png" draggable="false" alt=""><h3 style="margin:0; padding:0;" > blue id   </h3>     </span>
+    </div>
+    <nav>
+        <div class="navigation">
+            <a #nav (click)="chosen =navigations[0]"  href="#landing"><h3 [class.chosen]='chosen ==navigations[0]'>Home</h3></a>
+            <a #nav (click)="chosen =navigations[1]"  href="#data" ><h3 [class.chosen]='chosen ==navigations[1]'>Data</h3></a>
+            <a #nav (click)="chosen=navigations[2]" href="#explore" ><h3  [class.chosen]='chosen ==navigations[2]'>Blogs</h3></a>
+            <a (click)="chosen =navigations[3]" #nav  ><h3 [class.chosen]='chosen ==navigations[3]'>About Us</h3 ></a>
+        </div>
+      
+    </nav>
+    <div class="mobile_menu">
+        <nav class="hideOnPc">
+            <span class="material-symbols-outlined">menu</span>
+            <div class="navigation hideOnPc">
+                <a #nav (click)="chosen =navigations[0]"  href="#landing"><h3 [class.chosen]='chosen ==navigations[0]'>Home</h3></a>
+                <a #nav (click)="chosen =navigations[1]"  href="#data" ><h3 [class.chosen]='chosen ==navigations[1]'>Data</h3></a>
+                <a #nav (click)="chosen=navigations[2]" href="#explore" ><h3  [class.chosen]='chosen ==navigations[2]'>Blogs</h3></a>
+                <a (click)="chosen =navigations[3]" #nav  ><h3 [class.chosen]='chosen ==navigations[3]'>Courses</h3 ></a>
+            </div>
+          
+        </nav>
+          <div *ngIf="USER==undefined" class="login hideOnPc">
+            <h3 routerLink="/login" >Sign Up</h3>
+            <h3  routerLink="/login" class="log-in">Login</h3>
+        </div>
+    </div>
+    <div *ngIf="USER==undefined" class="login hideOnMobile">
+        <h3 routerLink="/login" >Sign Up</h3>
+        <h3  routerLink="/login" class="log-in">Login</h3>
+    </div>
+  
+</div>

@@ -1,0 +1,305 @@
+<section id="landing" class="landing-page">
+    <div class="bg">
+        <img src="bg2.png" draggable="false" alt="">
+    </div>
+    <div class="container">
+        <h3>Where the joy of learn meets the power of community</h3>
+        <p>Dive deep in immersive, interactive small groups. Expand horizons, engage in discussions, and elevate your learning journey with us.</p>
+        <span class="search">
+            <input type="text" placeholder="search for data,info or creators"><span routerLink="/hhz"><i class='bx bx-search-alt-2' ></i></span>
+        </span>
+    </div>
+</section>
+<section id="explore" class="explore">
+    <div class="explore-container">
+    <p>free for you</p>
+    <h3>Explore a dynamic and enjoyable experience</h3>
+    <div class="cards-container">
+        <div class="blue-card card">
+            <span><i class="fa-solid fa-chart-simple"></i><h3>Free Data</h3> </span>
+            <h4>Access a wide range of free data to fuel your research and projects.</h4>
+            <p>learn more ></p>
+        </div>
+        <div class="card">
+            <span><i class="fa-regular fa-newspaper"></i><h3>Last News</h3> </span>
+            <h4>Stay updated with the latest news and developments in your field.</h4>
+            <p>learn more ></p>
+        </div>
+        <div class="card">
+            <span><i class="fa-solid fa-book"></i><h3>Free Courses</h3> </span>
+            <h4>Enhance your skills with our selection of free, high-quality courses.</h4>
+            <p>learn more ></p>
+        </div>
+    </div>
+    <div class="discover-container">
+        <h3>Discover a World of Data and Learning for You</h3>
+        <p>Dive into a curated collection of data and courses that fit your interests</p>
+        <div class="tags">
+            <span class="tag" *ngFor="let item of Tags; let i =index" (click)="change(i)" [class.highlighted-data]='selected==i' >{{item}}  </span>
+        </div>
+    </div>
+    </div>
+</section>
+<section id="data" class="Data">
+    <div class="data-container">
+        <h3>Data</h3>
+        <span>
+            <p>Our data is more than just numbers and facts—it's the foundation of informed decision-making and insightful analysis. 
+                We offer a wealth of curated, reliable data that empowers you to explore new perspectives, uncover trends,
+                 and drive impactful outcomes.</p>
+                 <button>View All</button>
+        </span>
+        <div class="data-background">
+                <div class="data-card" *ngFor="let ele of data">
+                    <img [src]="ele.image" alt="">
+                    <div class="span" ><span><span class="time">{{ele.time}} </span>  <span #difficulty id="difficulty" class="difficulty">{{ele.difficulty}}</span></span><p class="author"> by {{ele.Author}} </p></div>
+                    <h3>{{ele.title}} </h3>
+                    <p>{{ele.discription}} </p>
+                    <button>get it now</button>
+
+            </div>
+        </div>
+    </div>
+</section>
+<section id="exchange" class="exchange">
+    <div  class="exchange-container">
+        <h3>Exchange</h3>
+        <span>
+            <p>Exchange is at the heart of our community. We foster a dynamic environment where ideas, knowledge, 
+                and experiences are shared freely. Here, every interaction is an opportunity to learn, 
+                grow, and contribute to something greater. </p>
+                 <button>View All</button>
+        </span>
+        <div class="exchange-background">
+            <div class="exchange-card" *ngFor="let ex of Exchange">
+                <div class="exchange-text">
+                    <p>{{ex.text}} </p>
+                </div>
+                <div class="exchange-informations">
+                    <span> <img [src]="ex.image" alt=""> <h3>{{ex.name}}  </h3>  </span>    
+                    <button>Read Full Chat</button>
+                </div>
+          </div>
+        </div>
+    </div>
+</section>
+<section class="blogs">
+    <div class="blogs-container">
+        <h3>Blogs </h3>
+        <span>
+            <p>Discover a diverse range of courses 
+                designed to enhance your skills and knowledge. Whether you're looking to advance your career, 
+                delve into a new subject, or simply pursue your passion.</p>
+                 <button>View All</button>
+        </span>
+        <div class="blogs-background">
+            <div class="main-blog">
+                <img src="mainBlog.jpg" alt="">
+                <p class="post-time">il y a 2 jours</p>
+                <h3>The Role of Marine Ecosystems in Climate Regulation</h3>
+                <p class="blog-text">Marine ecosystems play a critical role in regulating the Earth’s climate by absorbing carbon dioxide </p>
+                <a class="readMore">read more<span class="material-symbols-outlined">
+                    chevron_right
+                    </span></a>
+            </div>
+            <div class="other-blogs">
+                <div class="blog-one">
+                    <div class="blog-image-container">
+                        <img src="blogOne.jpg" alt="">
+                    </div>
+                    <div class="blog-informations">
+                        <p class="blog-time">il y a 4 jours</p>
+                    <h3 class="blog-title">The Causes, Mechanisms, and Ecological Impact of Ocean Acidification </h3>
+                    <p class="blog-text">This topic explores the various factors contributing to ocean acidification..</p>
+                    <a class="readMore second-readmore">read more<span class="material-symbols-outlined">
+                        chevron_right
+                        </span></a>
+                    </div>
+                </div>
+                <div class="blog-two">
+                    <div class="blog-image-container">
+                        <img src="blogTwo.jpg" alt="">
+                    </div>
+                    <div class="blog-informations">
+                        <p class="blog-time">il y a 6 jours</p>
+                    <h3 class="blog-title">Understanding Marine Biodiversity: Conservation Strategies </h3>
+                    <p class="blog-text">This topic covers the scope of marine biodiversity, highlighting the diverse </p>
+                    <a class="readMore second-readmore">read more<span class="material-symbols-outlined">
+                        chevron_right
+                        </span></a>
+                    </div>
+                </div>
+                <div class="blog-three">
+                    <div class="blog-image-container">
+                        <img src="blogThree.jpg" alt="">
+                    </div>
+                    <div class="blog-informations">
+                        <p class="blog-time">il y a 1 semaine</p>
+                    <h3 class="blog-title">The Pervasive Threat of Microplastics: Investigating Their Sources, Distribution</h3>
+                    <p class="blog-text">This topic investigates the sources and distribution of microplastics in marine </p>
+                    <a class="readMore second-readmore">read more<span class="material-symbols-outlined">
+                        chevron_right
+                        </span></a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+<section class="courses">
+    <div class="courses-container">
+        <h3>Courses</h3>
+        <span>
+            <p>Discover a diverse range of courses designed to enhance your skills and knowledge.
+                 Whether you're looking to advance your career, delve into a new subject, or simply
+                  pursue your passion.</p>
+                 <button>View All</button>
+        </span>
+        <div class="courses-background">
+            <div class="course-card"  *ngFor='let course of courses'>
+                <div class="course-image">
+                    <img [src]="course.image" alt="" style='opacity:1;'>
+                </div>
+                <div class="duration-stars">
+                    <div class="course-duration">
+                        {{course.duration}}
+                    </div>
+                    <div class="course-stars">
+                            {{course.stars}} ({{course.raters}})
+                    </div>
+                </div>
+                <div class="course-details">     
+                    <h3>{{course.title}} </h3>
+                    <p >
+                        {{course.paragraph}}
+                    </p>
+                </div>
+                <button>Enroll Now</button>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="FAQ" class="faq">
+    <div class="faq-information">
+        <h3>Frequently Asked Questions</h3>
+        <p>Still you have any questions? Contact our Team via <a href="mailto:support@skillbridge.com">support&#64;skillbridge.com</a> </p>
+        <span class="see-all-faqs">
+            <a > see all FAQ's</a><span class="material-symbols-outlined">
+                arrow_right_alt
+                </span>
+        </span>
+    </div>
+    <div class="questions-container">
+        <details  class="question">
+            <summary draggable="false" (click)="change1()"  >Can I enroll in multiple courses at once?<span  class="material-symbols-outlined">
+                @if(qst1==true){
+                    remove
+                }
+                @else {
+                    add
+                }
+                </span></summary>
+            <p>            Absolutely! You can enroll in multiple courses simultaneously and access them at your convenience.
+            </p>
+        </details>
+        <details class="question">
+            <summary  (click)="change2()">What kind of support can I expect from instructors?<span class="material-symbols-outlined">
+                @if(qst2==true){
+                    remove
+                }
+                @else {
+                    add
+                }
+                </span></summary>
+            <p>
+                the completion the example  i just saw is crazy
+            </p>
+        </details>
+        <details class="question">
+            <summary (click)="change3()">Are the courses self-paced or do they have specific start and end dates?<span class="material-symbols-outlined">
+                @if(qst3==true){
+                    remove
+                }
+                @else {
+                    add
+                }
+                </span></summary>
+            <p>            the completion the example  i just saw is crazy
+            </p>
+        </details>
+        <details class="question">
+            <summary (click)="change4()" >Are there any prerequisites for the courses?<span class="material-symbols-outlined">
+                @if(qst4==true){
+                    remove
+                }
+                @else {
+                    add
+                }
+                </span></summary>
+            <p>
+                the completion the example  i just saw is crazy
+            </p>
+        </details>
+        <details class="question">
+            <summary (click)="change5()">Can I download the course materials for offline access?<span class="material-symbols-outlined">
+                @if(qst5==true){
+                    remove
+                }
+                @else {
+                    add
+                }
+                </span></summary>
+            <p>
+            the completioln the example  i just saw is crazy
+            </p>
+        </details>
+        <details>
+            <summary>try</summary>
+            this
+        </details>
+
+    </div>
+</section>
+<footer>
+    <div class="row-one">
+        <div class="contact">
+            <h3>contact</h3>        
+            <ul>
+                <!-- <li><img src="logo.png" alt=""></li> -->
+                <li><i class="fa-regular fa-envelope"></i>BLUE-ID&#64;gmail.com</li>
+                <li><i class="fa-solid fa-phone"></i> (+213) 779356378</li>
+                <li><i class="fa-solid fa-location-dot"></i> Algiers, Algeria</li>
+            </ul>
+            </div>
+            <div class="home">
+                <h3>Home</h3>
+                <ul>
+                    <li><a href="">Our Data</a></li>
+                    <li><a href="">Exchange</a></li>
+                    <li><a href="">Our Courses</a> </li>
+                    <li><a href=""> FAQ</a></li>
+                </ul>
+            </div>
+            <div class="About">
+                <h3>About Us</h3>
+                <ul>
+                    <li>Plateform name</li>
+                    <li>Our Goals</li>
+                    <li>Team Memebers</li>
+                </ul>
+            </div>
+            <div class="social-profiles">
+                <h3>social profiles</h3>
+                    <ul>
+                    <li><i class="fa-brands fa-instagram"></i> Instagram</li>
+                    <li><i class="fa-brands fa-linkedin-in"></i>LinkedIn</li>
+                    <li><i class="fa-brands fa-facebook-f"></i>Facebook</li>
+                    </ul>
+            </div>
+    </div>
+    <div class="row-two">
+        <div class="all-rights">
+            all rights are preserved</div>
+    </div>
+</footer>

@@ -1,0 +1,43 @@
+<div class="background">
+    <div class="container">
+            <div class="login">
+                <h3>Login</h3>
+                <form [formGroup]="loginForm" (ngSubmit)="submit()" >
+                    <Label>Email:
+                        <input type="text" name="email" id="" formControlName="email">
+                    </Label>
+                    <label>Password:
+                        <input type="password" name="email" id="" formControlName="password">
+                    </label>
+                    <p>forgot your password ? <a >click here</a></p>
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+            <div class="signup">
+                <h3>Sign Up</h3>
+                <form action="">
+                    <label for="">
+                        Enter your Name:
+                        <input type="text" name="" id="">
+                    </label>
+                    <label for="">
+                        Enter your Email:
+                        <input type="email" name="" id="">
+
+                    </label>
+                    <label for="">
+                        Enter a strong Password:
+                        <input type="password" name="" id="">
+                    </label>
+                        <button>Sign up</button>
+                </form>
+            </div>
+            <div class="hider" [ngClass]="on==='login'? 'right' : 'left'">
+                <h1 *ngIf="on=='signup'">already have an Account ?</h1>
+                <h1 *ngIf="on==='login'">Don't have an account?</h1>
+                <button *ngIf="on=='signup'" (click)="login()" >login</button>
+                <button *ngIf="on=='login'" (click)="signup()">Sign up</button>
+                
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,142 @@
+.container{
+    height:5rem;
+    padding: .5rem 0 .5rem 0;
+    height:clamp(2rem,3rem,5rem);
+    display: grid;
+    grid-template-columns: 10rem 1fr 20rem;
+    width: 100svw;
+    position:sticky;
+    top: 0;
+    overflow-x: hidden;
+    border-bottom: .5px solid rgb(209, 208, 208);
+    z-index: 1000;
+    background-color: var(--bg);
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.announcement{
+    overflow-x: hidden;
+    height: 1.5rem;
+    top: 0;
+    z-index: 99999;
+    width: 100svww;
+background-color: var(--blue);
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.announcement span i {
+    cursor: pointer;
+}
+.navigation {
+    grid-column: 2/3;
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+    justify-content: start;
+    flex-wrap: nowrap;
+}
+.navigation h3 {
+    cursor: pointer;
+    padding: .4rem .8rem;
+    border-radius: .5rem;
+}
+.navigation h3:hover {
+    background-color: #F1F1F3;
+}
+.login {
+    grid-column: 3/4;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2rem;
+}.container h3 {
+    font-size: 1rem;
+    font-weight: 500;
+}
+.log-in {
+    border-radius: .5rem;
+    background-color: var(--blue);
+    padding: .4rem .8rem;
+}
+.chosen {
+    background-color: #F1F1F3;
+    border-radius: .5rem;
+    padding: .3rem .6rem;
+}
+.announcement span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.announcement p {
+    font-size: .8rem;
+}
+.logo{
+    grid-column: 1/2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.logo span {
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.logo h3 {
+    font-size:1.2rem;
+}
+.logo img {
+    background-color: var(--blue);
+    border: none;
+    cursor: pointer;
+    width:2.5rem;
+    background-color: transparent;
+    aspect-ratio:1;
+}
+.mobile-navigation  {
+    height: 100svh;
+    width: 20rem;
+    position: none;
+    right: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+}
+.mobile-navigation span {
+    justify-self: end;
+    top: 1rem;
+    right: 2rem;
+    width: 1rem;
+    aspect-ratio: 1;
+}
+.login * {
+    cursor: pointer;
+}
+.hideOnPc {
+    display:none;
+    width: 0;
+    position:absolute;
+    }
+.mobile_menu {
+    right: 0;
+    width: 10rem;
+    height: 100svh;
+    position: absolute;
+    z-index:99999;
+}
+
+@media screen and  (max-width:800px) {
+    .mobile-navigation {
+        position: fixed;
+    }
+    .hideOnMobile{
+        display: none;  
+    }
+}

@@ -1,0 +1,122 @@
+.background {
+    height: 100svh;
+    width:100svw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    width: 70rem;
+    height: 34rem;
+    border: 1px solid black;
+    overflow: clip;
+    position: relative;
+    border-radius: 3rem;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 35rem 35rem;
+}
+.login {
+    width: 35rem;
+    height: 34rem;
+    border-right: 1px solid black;
+    display: grid;
+    grid-template-rows: 4rem 30rem;
+    background-color: cyan;
+}
+.login h3 {
+    grid-row: 1/2;
+    justify-self: center;
+    padding-top: 2rem;
+    font-size:1.4rem;
+}
+.login form {
+    grid-row: 2/3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5rem;
+}
+input {
+    height: 3rem;
+    width: 17rem;
+    border: none;
+    background-color: whitesmoke;
+    border-radius: 3rem;
+    padding-inline: 1rem;
+    margin-bottom: 2rem;
+    margin-top: .5rem;
+}
+label > * {
+    display: block;
+}
+input[type='password'] {
+    margin-bottom: .2rem;
+}
+form p {
+    font-size: .8rem;
+}
+button {
+    margin-top: 1rem;
+    height: 3rem;
+    border-radius: 3rem;
+    width: 15rem;
+    border: none;
+}
+.signup {
+    width: 35rem;
+    height: 34rem;
+    border-right: 1px solid black;
+    display: grid;
+    grid-template-rows: 4rem 30rem;
+    background-color: green;
+}
+.signup h3 {
+    grid-row: 1/2;
+    justify-self: center;
+    padding-top: 2rem;
+    font-size:1.4rem;
+}
+.signup form {
+    grid-row: 2/3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3rem;
+}
+.signup input {
+    height: 3rem;
+    width: 17rem;
+    border: none;
+    background-color: whitesmoke;
+    border-radius: 3rem;
+    padding-inline: 1rem;
+    margin-bottom: 1.5rem;
+    margin-top: .2rem;
+}
+.hider {
+    width: 35rem;
+    height:34rem;
+    background-color: var(--bg);
+    z-index: 9999;
+    position: absolute;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.hider button {
+    background-color: var(--blue);
+    color: var(--bg);
+    
+}
+.left {
+    left:0;
+}
+.right {
+    right: 0;
+}
+.hider button {
+    cursor:pointer;
+    z-index: 9999999;
+}

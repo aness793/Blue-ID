@@ -1,0 +1,7 @@
+body {
+    overflow-x: clip;
+    background-color: var(--bg);
+}
+*{
+    overflow-x: clip;
+}
